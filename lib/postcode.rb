@@ -6,6 +6,7 @@ class Postcode
 
   def valid?
     return true if @postcode.match(/^\w{3}-?\w{4}$/)
+    return true if @postcode.match(/^\w{3}-?\w{2}$/)
     return false
   end
 

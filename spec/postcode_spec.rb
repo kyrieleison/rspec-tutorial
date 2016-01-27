@@ -23,5 +23,13 @@ RSpec.describe "Postcode" do
       postcode = Postcode.new("00000000")
       expect(postcode.valid?).to be_falsey
     end
+    it "3桁の整数 + '-' + 2桁の整数であるとき" do
+      postcode = Postcode.new("000-00")
+      expect(postcode.valid?).to be_truthy
+    end
+    it "5桁の整数であるとき" do
+      postcode = Postcode.new("00000")
+      expect(postcode.valid?).to be_truthy
+    end
   end
 end
