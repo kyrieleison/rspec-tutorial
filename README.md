@@ -1,1 +1,5 @@
-# tdd-tutorial
+# rspec-tutorial
+
+```
+$ gem install rspec
+```
